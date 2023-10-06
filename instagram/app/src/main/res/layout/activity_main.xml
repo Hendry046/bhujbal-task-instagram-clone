@@ -34,6 +34,7 @@
         android:id="@+id/textView"
         android:layout_width="33dp"
         android:layout_height="20dp"
+        android:textColor="#808080"
         android:text="from"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"

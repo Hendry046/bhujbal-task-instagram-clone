@@ -60,6 +60,7 @@
         android:layout_marginEnd="55dp"
         android:layout_marginBottom="5dp"
         android:hint="Password"
+        app:endIconMode="password_toggle"
         android:paddingStart="20dp"
         android:textColorHint="#808080"
         android:textSize="14sp"

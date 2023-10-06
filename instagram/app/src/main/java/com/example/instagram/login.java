@@ -17,6 +17,9 @@ public class login extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
 
+    private static final String USER_PREFERENCES = "user_preferences";
+    private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +47,7 @@ public class login extends AppCompatActivity {
 
         if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
             // Username or password is empty
-            Toast.makeText(this, "Username and password cannot be empty", Toast.LENGTH_SHORT).show();
+            showToast("Username or password cannot be empty");
             saveLoginStatus(false);
         } else if (isUsernameValid && isPasswordValid) {
             // Valid credentials
@@ -52,18 +55,19 @@ public class login extends AppCompatActivity {
             startNextActivity();
         } else {
             // Invalid credentials
-            Toast.makeText(this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+            showToast("Invalid Username or Password");
             saveLoginStatus(false);
         }
     }
 
-
-
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
 
     private void saveLoginStatus(boolean isLoggedIn) {
-        SharedPreferences preferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences(USER_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putBoolean("isLoggedIn", isLoggedIn);
+        editor.putBoolean(KEY_IS_LOGGED_IN, isLoggedIn);
         editor.apply();
     }
 
@@ -78,7 +82,6 @@ public class login extends AppCompatActivity {
         String passwordRegex = "^(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$";
         return password.matches(passwordRegex);
     }
-
 
     private void startNextActivity() {
         Intent intent = new Intent(this, home.class);

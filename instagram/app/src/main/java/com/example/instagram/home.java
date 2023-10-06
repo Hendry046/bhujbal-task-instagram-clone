@@ -1,6 +1,7 @@
 package com.example.instagram;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
@@ -21,10 +22,25 @@ public class home extends AppCompatActivity {
         gridView.setAdapter(adapter);
     }
 
-    //"Log Out" button is clicked
+    // "Log Out" button is clicked
     public void logout(View view) {
+        // Clear the login status
+        saveLoginStatus(false);
+
         Intent intent = new Intent(this, login.class);
         startActivity(intent);
         finish();
     }
+
+    private void saveLoginStatus(boolean isLoggedIn) {
+        SharedPreferences preferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("isLoggedIn", isLoggedIn);
+        editor.apply();
+    }
 }
+
+
+
+
+
