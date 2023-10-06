@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background color for the button -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#808080" /> <!-- Adjust the background color as needed -->
+        </shape>
+    </item>
+
+    <!-- Border for the button -->
+    <item android:right="1dp" android:left="1dp" android:top="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#808080" /> <!-- Use the same color as the background -->
+            <corners android:radius="20dp" /> <!-- Adjust the radius as needed for more or less rounded corners -->
+            <stroke
+                android:width="4dp"
+                android:color="#000000" /> <!-- Adjust the border color as needed -->
+        </shape>
+    </item>
+
+</layer-list>
