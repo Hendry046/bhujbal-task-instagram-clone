@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">instagram</string>
+    <string name="following_count_placeholder">0\nFollowing</string>
+
 </resources>
