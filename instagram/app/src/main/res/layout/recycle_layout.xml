@@ -35,6 +35,5 @@
         android:text="Follow"
         android:textSize="13sp"
         android:textColor="#ffffff"
-        android:textAllCaps="false"
-        android:background="@drawable/button_background"/>
+        android:textAllCaps="false"/>
 </RelativeLayout>

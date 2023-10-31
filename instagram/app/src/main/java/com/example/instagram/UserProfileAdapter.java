@@ -1,8 +1,9 @@
 package com.example.instagram;
 
+import static com.example.instagram.SharedPreferencesUtil.saveFollowingCount;
+
 import android.content.Context;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.ViewHolder>{
+public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.ViewHolder> {
 
     private List<UserProfile> userProfiles;
     private Context context;
     private TextView followingCountTextView;
-    private int followingCount = 0; // Initialize the following count
 
     public UserProfileAdapter(Context context, List<UserProfile> userProfiles, TextView followingCountTextView) {
         this.context = context;
@@ -61,6 +61,7 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
         holder.followButton.setOnClickListener(v -> {
             // Toggle the following status
             userProfile.toggleFollowing();
+            userProfile.setFollowStatus(userProfile.isFollowing()); // Save the follow status
 
             // Update the "Follow" button text and appearance based on the new follow status
             if (userProfile.isFollowing()) {
@@ -70,20 +71,14 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
             }
 
             // Update the following count based on the follow status
-            if (userProfile.isFollowing()) {
-                // User started following, so increment the count
-                followingCount++;
-            } else {
-                // User stopped following, so decrement the count
-                followingCount--;
-            }
+            int followingCount = calculateFollowingCount();
+            followingCountTextView.setText(String.valueOf(followingCount) + " Following");
 
-            // Update the following count display
-            followingCountTextView.setText(followingCount + " Following");
+            // Save the following count and follow status in SharedPreferences
+            SharedPreferencesUtil.saveFollowingCount(context, followingCount);
+            SharedPreferencesUtil.saveFollowStatus(context, userProfile.getName(), userProfile.getFollowStatus());
         });
     }
-
-
 
     @Override
     public int getItemCount() {
@@ -101,5 +96,14 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
             nameTextView = itemView.findViewById(R.id.nameTextView);
             followButton = itemView.findViewById(R.id.followButton);
         }
+    }
+    private int calculateFollowingCount() {
+        int count = 0;
+        for (UserProfile userProfile : userProfiles) {
+            if (userProfile.isFollowing()) {
+                count++;
+            }
+        }
+        return count;
     }
 }

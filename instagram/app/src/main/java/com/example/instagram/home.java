@@ -29,70 +29,78 @@ public class home extends AppCompatActivity {
         // Initialize your user profiles list
         userProfiles = new ArrayList<>();
         // Add user profiles (modify this part as needed)
-        userProfiles.add(new UserProfile("Ethan", R.drawable.i1));
-        userProfiles.add(new UserProfile("Liam", R.drawable.i2));
-        userProfiles.add(new UserProfile("Noah", R.drawable.i3));
-        userProfiles.add(new UserProfile("Aiden", R.drawable.i4));
-        userProfiles.add(new UserProfile("Lucas", R.drawable.i5));
-        userProfiles.add(new UserProfile("Mason", R.drawable.i6));
-        userProfiles.add(new UserProfile("Logan", R.drawable.i7));
-        userProfiles.add(new UserProfile("Caleb", R.drawable.i8));
-        userProfiles.add(new UserProfile("Samuel", R.drawable.i9));
-        userProfiles.add(new UserProfile("Benjamin", R.drawable.i10));
-        userProfiles.add(new UserProfile("Simon", R.drawable.i11));
-        userProfiles.add(new UserProfile("Elijah", R.drawable.i12));
-        userProfiles.add(new UserProfile("William", R.drawable.i13));
-        userProfiles.add(new UserProfile("James", R.drawable.i14));
-        userProfiles.add(new UserProfile("Michael", R.drawable.i15));
-        userProfiles.add(new UserProfile("Daniel", R.drawable.i16));
-        userProfiles.add(new UserProfile("Andrew", R.drawable.i17));
-        userProfiles.add(new UserProfile("Oliver", R.drawable.i18));
-        userProfiles.add(new UserProfile("Matthew", R.drawable.i19));
-        userProfiles.add(new UserProfile("Jackson", R.drawable.i20));
-        userProfiles.add(new UserProfile("Joseph", R.drawable.i21));
-        userProfiles.add(new UserProfile("David", R.drawable.i22));
-        userProfiles.add(new UserProfile("Christopher", R.drawable.i23));
-        userProfiles.add(new UserProfile("Nicholas", R.drawable.i24));
-        userProfiles.add(new UserProfile("Anthony", R.drawable.i25));
-        userProfiles.add(new UserProfile("Jonathan", R.drawable.img9));
-        userProfiles.add(new UserProfile("Alexander", R.drawable.img9));
-        userProfiles.add(new UserProfile("Noah", R.drawable.img9));
-        userProfiles.add(new UserProfile("Owen", R.drawable.img9));
-        userProfiles.add(new UserProfile("Thomas", R.drawable.img9));
-        userProfiles.add(new UserProfile("Charles", R.drawable.img9));
-        userProfiles.add(new UserProfile("Nathan", R.drawable.img9));
-        userProfiles.add(new UserProfile("Jack", R.drawable.img9));
-        userProfiles.add(new UserProfile("Ryan", R.drawable.img9));
-        userProfiles.add(new UserProfile("William", R.drawable.img9));
-        userProfiles.add(new UserProfile("Gabriel", R.drawable.img9));
-        userProfiles.add(new UserProfile("Isaac", R.drawable.img9));
-        userProfiles.add(new UserProfile("John", R.drawable.img9));
-        userProfiles.add(new UserProfile("Brandon", R.drawable.img9));
-        userProfiles.add(new UserProfile("Luke", R.drawable.img9));
-        userProfiles.add(new UserProfile("Robert", R.drawable.img9));
-        userProfiles.add(new UserProfile("Adam", R.drawable.img9));
-        userProfiles.add(new UserProfile("Daniel", R.drawable.img9));
-        userProfiles.add(new UserProfile("Zachary", R.drawable.img9));
-        userProfiles.add(new UserProfile("Hunter", R.drawable.img9));
-        userProfiles.add(new UserProfile("Justin", R.drawable.img9));
-        userProfiles.add(new UserProfile("Jayden", R.drawable.img9));
-        userProfiles.add(new UserProfile("Evan", R.drawable.img9));
-        userProfiles.add(new UserProfile("Cameron", R.drawable.img9));
-        userProfiles.add(new UserProfile("Dylan", R.drawable.img9));
+        userProfiles.add(new UserProfile("1", "Ethan", R.drawable.i1));
+        userProfiles.add(new UserProfile("2","Liam", R.drawable.i2));
+        userProfiles.add(new UserProfile("3","Noah", R.drawable.i3));
+        userProfiles.add(new UserProfile("4","Aiden", R.drawable.i4));
+        userProfiles.add(new UserProfile("5","Lucas", R.drawable.i5));
+        userProfiles.add(new UserProfile("6","Mason", R.drawable.i6));
+        userProfiles.add(new UserProfile("7","Logan", R.drawable.i7));
+        userProfiles.add(new UserProfile("8","Caleb", R.drawable.i8));
+        userProfiles.add(new UserProfile("9","Samuel", R.drawable.i9));
+        userProfiles.add(new UserProfile("10","Benjamin", R.drawable.i10));
+        userProfiles.add(new UserProfile("11","Simon", R.drawable.i11));
+        userProfiles.add(new UserProfile("12","Elijah", R.drawable.i12));
+        userProfiles.add(new UserProfile("13","William", R.drawable.i13));
+        userProfiles.add(new UserProfile("14","James", R.drawable.i14));
+        userProfiles.add(new UserProfile("15","Michael", R.drawable.i15));
+        userProfiles.add(new UserProfile("16","Daniel", R.drawable.i16));
+        userProfiles.add(new UserProfile("17","Andrew", R.drawable.i17));
+        userProfiles.add(new UserProfile("18","Oliver", R.drawable.i18));
+        userProfiles.add(new UserProfile("19","Matthew", R.drawable.i19));
+        userProfiles.add(new UserProfile("20","Jackson", R.drawable.i20));
+        userProfiles.add(new UserProfile("21","Joseph", R.drawable.i21));
+        userProfiles.add(new UserProfile("22","David", R.drawable.i22));
+        userProfiles.add(new UserProfile("23","Christopher", R.drawable.i23));
+        userProfiles.add(new UserProfile("24","Nicholas", R.drawable.i24));
+        userProfiles.add(new UserProfile("25","Anthony", R.drawable.i25));
+        userProfiles.add(new UserProfile("26","Jonathan", R.drawable.img9));
+        userProfiles.add(new UserProfile("27","Alexander", R.drawable.img9));
+        userProfiles.add(new UserProfile("28","Noah", R.drawable.img9));
+        userProfiles.add(new UserProfile("29","Owen", R.drawable.img9));
+        userProfiles.add(new UserProfile("30","Thomas", R.drawable.img9));
+        userProfiles.add(new UserProfile("31","Charles", R.drawable.img9));
+        userProfiles.add(new UserProfile("32","Nathan", R.drawable.img9));
+        userProfiles.add(new UserProfile("33","Jack", R.drawable.img9));
+        userProfiles.add(new UserProfile("34","Ryan", R.drawable.img9));
+        userProfiles.add(new UserProfile("35","William", R.drawable.img9));
+        userProfiles.add(new UserProfile("36","Gabriel", R.drawable.img9));
+        userProfiles.add(new UserProfile("37","Isaac", R.drawable.img9));
+        userProfiles.add(new UserProfile("38","John", R.drawable.img9));
+        userProfiles.add(new UserProfile("39","Brandon", R.drawable.img9));
+        userProfiles.add(new UserProfile("40","Luke", R.drawable.img9));
+        userProfiles.add(new UserProfile("41","Robert", R.drawable.img9));
+        userProfiles.add(new UserProfile("42","Adam", R.drawable.img9));
+        userProfiles.add(new UserProfile("43","Daniel", R.drawable.img9));
+        userProfiles.add(new UserProfile("44","Zachary", R.drawable.img9));
+        userProfiles.add(new UserProfile("45","Hunter", R.drawable.img9));
+        userProfiles.add(new UserProfile("46","Justin", R.drawable.img9));
+        userProfiles.add(new UserProfile("47","Jayden", R.drawable.img9));
+        userProfiles.add(new UserProfile("48","Evan", R.drawable.img9));
+        userProfiles.add(new UserProfile("49","Cameron", R.drawable.img9));
+        userProfiles.add(new UserProfile("50","Dylan", R.drawable.img9));
 
 
         // Find and initialize the followingCountTextView
         followingCountTextView = findViewById(R.id.followingCountTextView);
 
+        // Initialize and update the following count
+        followingCountTextView = findViewById(R.id.followingCountTextView);
+        followingCount = SharedPreferencesUtil.getFollowingCount(this);
+        followingCountTextView.setText(String.valueOf(followingCount) + " Following");
+
         recyclerView = findViewById(R.id.recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Load and apply the follow status for each user profile
+        for (UserProfile userProfile : userProfiles) {
+            boolean followStatus = SharedPreferencesUtil.getFollowStatus(this, userProfile.getUserId());
+            userProfile.setFollowStatus(followStatus);
+        }
 
         // Create the adapter and pass the followingCountTextView
         adapter = new UserProfileAdapter(this, userProfiles, followingCountTextView);
         recyclerView.setAdapter(adapter);
-
-        // Initialize and update the following count
-        updateFollowingCount();
     }
 
     // "Log Out" button is clicked
@@ -108,7 +116,10 @@ public class home extends AppCompatActivity {
     // Update and display the following count
     private void updateFollowingCount() {
         followingCount = calculateFollowingCount();
-        followingCountTextView.setText(String.valueOf(followingCount));
+        followingCountTextView.setText(String.valueOf(followingCount) + " Following");
+
+        // Save the following count in SharedPreferences
+        SharedPreferencesUtil.saveFollowingCount(this, followingCount);
     }
 
     // Implement your logic to calculate the following count

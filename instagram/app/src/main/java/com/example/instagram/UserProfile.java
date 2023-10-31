@@ -5,6 +5,7 @@ public class UserProfile {
     private int imageResourceId;
     private boolean followStatus;
     private boolean isFollowing;
+    private String userId; // Add a unique user identifier
 
     public void setName(String name) {
         this.name = name;
@@ -22,11 +23,20 @@ public class UserProfile {
         this.followStatus = followStatus;
     }
 
-    public UserProfile(String name, int imageResourceId) {
+    public UserProfile(String userId, String name, int imageResourceId) {
+        this.userId = userId;
         this.name = name;
         this.imageResourceId = imageResourceId;
         this.followStatus = false;
 
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public boolean isFollowing() {
@@ -52,5 +62,12 @@ public class UserProfile {
     public void toggleFollowing() {
         isFollowing = !isFollowing;
     }
+
+
+    public boolean getFollowStatus() {
+        return followStatus;
+    }
+
+
 
 }
